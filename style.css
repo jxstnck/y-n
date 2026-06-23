@@ -219,96 +219,36 @@ h1 {
    ========================================================================== */
 
 /* 1. TABLET E SCHERMI MEDI (Fino a 992px di larghezza dello schermo) */
-@media (max-width: 992px) {
-    h1 {
-        font-size: 3.5rem;
-    }
-    #navBio {
-        margin-left: 0; /* Rimuove lo sfasamento */
-        gap: 1rem;
-    }
-    .navs {
-        font-size: 1.8rem;
-        padding: 0.8rem;
+@media (max-width: 576px) {
+    /* ... le tue regole esistenti ... */
+
+    /* RESET LAYOUT PRINCIPALE MOBILE */
+    .main {
+        width: 100%;
+        left: 0;
+        padding: 0 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 
-    /* Le griglie delle foto scendono a 2 colonne */
-    .griglia-foto, .noveg {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 30px 15px;
+    .main div {
+        margin-left: 0; /* Rimuove lo spostamento di 35rem */
+        margin-bottom: 2rem;
     }
 
-    /* Ridimensionamento testi generali */
-    .griglia-foto, .gallery-item, .gallery-item .name, .novegro2 {
-        font-size: 1.8rem;
-    }
-
-    /* Proporzione altezze immagini per tablet */
-    .gallery-item img, .immagini-coppia {
-        height: 360px;
-    }
-    .immagini-coppia img {
-        height: calc(50% - 5px);
-    }
-    .noveg img {
-        height: 300px;
-    }
-
-    /* Sistemazione layout delle Bios */
-    .yara, .nick {
-        margin-left: 2rem;
-        margin-right: 2rem;
-        margin-bottom: 5rem;
-    }
-    .yara img, .nick img {
-        float: none;
+    .video {
+        float: none; /* Rimuove il float che rompe l'incolonnamento */
         margin: 0 auto 2rem auto;
+        width: 100%;
+        max-width: 100%;
+        height: auto; /* Permette al video di adattarsi allo schermo */
     }
-    .yara div, .nick div {
-        margin-left: 0;
+
+    #countup-timer {
+        font-size: 3.5rem; /* Riduce il timer gigante per non farlo andare a capo */
         text-align: center;
     }
 }
 
-/* 2. SMARTPHONE (Fino a 576px di larghezza dello schermo) */
-@media (max-width: 576px) {
-    h1 {
-        font-size: 2.5rem;
-    }
-    #navBio {
-        flex-direction: row; /* Tiene i tre bottoni del menu sulla stessa riga */
-        gap: 0.5rem;
-        padding: 0 10px;
-    }
-    .navs {
-        font-size: 1.2rem;
-        padding: 0.6rem;
-    }
-
-    /* Le griglie collassano a 1 colonna singola */
-    .griglia-foto, .noveg {
-        grid-template-columns: 1fr;
-        gap: 35px 0;
-    }
-
-    /* Testo fluido perfetto per i telefoni per non spaginare */
-    .griglia-foto, .gallery-item, .gallery-item .name, .novegro2 {
-        font-size: 1.4rem;
-    }
-    
-    .gallery-item .name {
-        min-height: auto; /* Rilascia il blocco dell'altezza */
-    }
-
-    /* Ottimizzazione immagini a tutto schermo sui telefoni */
-    .gallery-item img, .immagini-coppia {
-        max-width: 100%;
-        height: 380px;
-    }
-    .immagini-coppia img {
-        height: calc(50% - 5px);
-    }
-    .noveg img {
-        height: 340px;
-    }
-}

@@ -220,35 +220,98 @@ h1 {
 
 /* 1. TABLET E SCHERMI MEDI (Fino a 992px di larghezza dello schermo) */
 @media (max-width: 576px) {
-    /* ... le tue regole esistenti ... */
 
-    /* RESET LAYOUT PRINCIPALE MOBILE */
+    body {
+        -webkit-text-stroke: 0.5px pink;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    /* HOME */
     .main {
         width: 100%;
-        left: 0;
-        padding: 0 1rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        padding: 1rem;
         text-align: center;
     }
 
     .main div {
-        margin-left: 0; /* Rimuove lo spostamento di 35rem */
-        margin-bottom: 2rem;
+        margin-left: 0;
     }
 
     .video {
-        float: none; /* Rimuove il float che rompe l'incolonnamento */
-        margin: 0 auto 2rem auto;
+        float: none;
         width: 100%;
         max-width: 100%;
-        height: auto; /* Permette al video di adattarsi allo schermo */
+        margin: 0 auto 2rem auto;
     }
 
     #countup-timer {
-        font-size: 3.5rem; /* Riduce il timer gigante per non farlo andare a capo */
+        font-size: 2.5rem;
+        line-height: 1.2;
+    }
+
+    /* NAVBAR */
+    #navBio {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .navs {
+        font-size: 1.5rem;
+        padding: 0.7rem 1rem;
+    }
+
+    /* BIOS */
+    .yara,
+    .nick {
+        margin: 0;
+        padding: 1rem;
         text-align: center;
+        font-size: 1.5rem;
+    }
+
+    .yara div,
+    .nick div {
+        margin-left: 0;
+    }
+
+    .yara img,
+    .nick img {
+        float: none;
+        display: block;
+        width: 80%;
+        max-width: 300px;
+        margin: 0 auto 1rem auto;
+    }
+
+    /* GALLERIA */
+    .griglia-foto {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .gallery-item {
+        font-size: 1.5rem;
+    }
+
+    .gallery-item .name {
+        font-size: 1.5rem;
+        min-height: auto;
+    }
+
+    /* NOVEGRO */
+    .noveg {
+        grid-template-columns: 1fr;
+    }
+
+    .noveg img {
+        height: auto;
+    }
+
+    .novegro2 {
+        font-size: 1.5rem;
     }
 }
-

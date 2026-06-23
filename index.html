@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8"/>
+    <title>Yaya And Nick Website</title>
+    <link rel="icon" href="images/icon.jpg">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <h1 style="text-align: center;">Yaya And Nick Website</h1>
+    <div class="main">
+        <iframe class="video" width="500" height="425" src="images/y+n but hd.mp4" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <div class="intro">Benvenuto/a nel miglior sito di sempre!<br>Questo sito è una raccolta di ricordi di Yaya e Nick, dal loro primo incontro ad oggi.<br>Nick e Yaya si sono messi insieme il 26 dicembre 2025.</div>
+    
+        <div id="nav"> <!--barra-->
+            <a class="navs" href="#" id="active">
+                <span class="navtext">HOME</span>
+            </a>
+            <a class="navs" href="bio.html" id="active">
+                <span class="navtext">BIOS</span>
+            </a>
+            <a class="navs" href="gallery.html">
+                <span class="navtext">GALLERIA</span>
+            </a>
+        </div>
+    </div>
+   
+    <div class="thing">
+        <!-- 1. The counter display inside your body -->
+        <div id="counter-container" style="text-align: center; font-size: 5rem;">
+        Nick e Yaya stanno insieme da:<br> 
+        <span id="countup-timer">Caricamento...</span>
+        </div>
+    </div>
+
+    <!-- 2. The JavaScript logic right below it -->
+    <script>
+    // Set the target past date (December 26, 2025 - Month is 11 because January is 0)
+    const startDate = new Date(2025, 11, 26, 0, 0, 0);
+
+    function updateCounter() {
+        const now = new Date();
+        const difference = now - startDate; // Difference in milliseconds
+
+        // Calculate time units
+        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+        // Display the result in the HTML element
+        document.getElementById('countup-timer').innerHTML = 
+            `${days} giorni, ${hours} ore, ${minutes} minuti e ${seconds} secondi`;
+    }
+
+    // Run the function immediately when the page loads
+    updateCounter();
+
+    // Update the counter every single second (1000 milliseconds)
+    setInterval(updateCounter, 1000);
+    </script>
+
+</body>
+
+</html>

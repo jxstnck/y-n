@@ -87,6 +87,7 @@ h1 {
     width: 25rem;
     float: left;
     clear: both;
+    border-radius: 1rem;
 }
 .yara {
     margin-left: 30rem;
@@ -101,6 +102,7 @@ h1 {
     width: 20rem;
     float: right;
     clear: both;
+    border-radius: 1rem;
 }
 .nick {
     margin-right: 30rem;
